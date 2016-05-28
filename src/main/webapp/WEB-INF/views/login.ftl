@@ -21,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>宝宝成长录 | 用户登录</title>
+        <title>宝宝成长录 | 登录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -34,6 +34,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="${application.getContextPath()}/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="${application.getContextPath()}/assets/global/plugins/ladda/ladda-themeless.min.css" rel="stylesheet" type="text/css" />
         <link href="${application.getContextPath()}/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
         <link href="${application.getContextPath()}/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
@@ -58,11 +59,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <form class="login-form" action="index.html" method="post">
+            <form class="login-form" action="" method="post" onsubmit="return false;">
                 <h3 class="form-title">登录到您的帐户</h3>
                 <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
-                    <span> Enter any username and password. </span>
+                    <span> 请输入您的用户名和密码 </span>
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
@@ -82,7 +83,13 @@ License: You must have a valid license purchased only from themeforest(the above
                         <input type="checkbox" name="remember" value="1" /> 记住我
                         <span></span>
                     </label>
-                    <button type="submit" class="btn blue pull-right"> 登录 </button>
+                    <button class="btn green mt-ladda-btn ladda-button pull-right" data-style="expand-right" type="submit">
+						<span class="ladda-label">
+							<i class="icon-arrow-right"></i>
+							登录
+						</span>
+						<span class="ladda-spinner"></span>
+					</button>
                 </div>
                 <div class="forget-password">
                     <h4>忘记密码 ?</h4>
@@ -183,6 +190,9 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="${application.getContextPath()}/assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
+		<script>
+			var contextPath = '${application.getContextPath()}';
+		</script>
         <script src="${application.getContextPath()}/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="${application.getContextPath()}/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="${application.getContextPath()}/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
@@ -201,6 +211,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="${application.getContextPath()}/assets/global/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        <script src="${application.getContextPath()}/assets/global/plugins/ladda/spin.min.js" type="text/javascript"></script>
+        <script src="${application.getContextPath()}/assets/global/plugins/ladda/ladda.min.js" type="text/javascript"></script>
         <script src="${application.getContextPath()}/assets/pages/scripts/login-4.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->

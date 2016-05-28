@@ -27,6 +27,7 @@
 	
 	<view-controller path="/" view-name="/login"/>
 	<view-controller path="/404" view-name="/404"/>
+	<view-controller path="/500" view-name="/500"/>
 	<view-controller path="/sessionInvalid" view-name="/sessionInvalid"/>
 
 	<!-- Resolves views selected for rendering by @Controllers to .ftl resources 

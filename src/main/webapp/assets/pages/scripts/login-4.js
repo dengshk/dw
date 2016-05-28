@@ -7,10 +7,12 @@ var Login = function () {
 	            focusInvalid: false, // do not focus the last invalid input
 	            rules: {
 	                username: {
-	                    required: true
+	                    required: true,
+	                    rangelength:[5,10]
 	                },
 	                password: {
-	                    required: true
+	                    required: true,
+	                    rangelength:[6,8]
 	                },
 	                remember: {
 	                    required: false
@@ -19,10 +21,12 @@ var Login = function () {
 
 	            messages: {
 	                username: {
-	                    required: "Username is required."
+	                    required: "用户名不能为空.",
+						rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串")
 	                },
 	                password: {
-	                    required: "Password is required."
+	                    required: "密码不能为空.",
+	                    rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串")
 	                }
 	            },
 
@@ -45,7 +49,18 @@ var Login = function () {
 	            },
 
 	            submitHandler: function (form) {
-	                form.submit();
+	            	$('.alert-danger').fadeOut();
+	            	var l = Ladda.create(this.submitButton);
+	            	l.start();
+	            	
+					$.post(contextPath+'/login/validate', $('.login-form').serialize(), function(data) {
+						if(data.code == 1000){
+		            		window.location.href = contextPath+data.user_home_page;
+		            	}else{
+		            		$('.alert-danger', $('.login-form'))
+		            			.html('<button class="close" data-close="alert"></button>'+'<span>'+ data.message +'</span>').fadeIn();
+		            	}
+		            }, 'json').always(function() { l.stop(); });
 	            }
 	        });
 
@@ -264,5 +279,6 @@ var Login = function () {
 }();
 
 jQuery(document).ready(function() {
+	Ladda.bind( 'input[type=submit]' );
     Login.init();
 });

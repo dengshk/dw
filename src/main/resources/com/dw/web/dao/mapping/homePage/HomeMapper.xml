@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper   
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dw.web.dao.homePage.HomeDao">
+
+	<!-- 查询-->
+	<select id="queryDefaultSize" resultType="map" parameterType="map">
+		select *
+		from(
+			select
+				qry_uuid      qryUuid,
+				cal_time      calTime,
+				day_express   dayExpress,
+				day_income    dayIncome,
+				day_expend    dayExpend,
+				day_self      daySelf,
+				day_profit    dayProfit,
+				day_cost      dayCost,
+				total_express totalExpress,
+				total_income  totalIncome,
+				total_expend  totalExpend,
+				total_self    totalSelf,
+				total_profit  totalProfit,
+				total_cost    totalCost,
+				create_time   createTime
+			from qry_snack_analysis
+			where 1=1
+				and qry_uuid = #{qryUuid}
+			order by cal_time desc
+			limit 0,7
+		)a
+		order by calTime asc
+	</select>
+	
+	<!--查询总体情况-->
+	<select id="queryTotalStatus" resultType="map" parameterType="map">
+		select
+		    ifnull(sum(case when type in(1,3) then -really_pay when type=2 then really_pay end),0)-ifnull(sum(express_price),0) totalProfit,
+		    ifnull(sum(case when type=1 then nums end),0) totalStock,
+		    (select ifnull(sum(case when type=1 then order_num when type=2 then -order_num end),0) from t_snack_order_log) stockNums,
+		    (select count(1) from t_snack_customer_info) customerNums
+		from(
+		    select
+		        2 type,-- 销售
+		        sum(express_price) express_price,
+		        sum(really_pay) really_pay,
+		        sum(sale_num) nums
+		    from t_snack_sale_info
+		union all
+		    select
+		        1 type,-- 进货
+		        sum(express_price),
+		        sum(really_pay),
+		        sum(stock_num)
+		    from t_snack_stock_info
+		union all
+		    select
+		        3 type,-- 自销
+		        0,
+		        sum(cost_price*order_num),
+		        sum(order_num)
+		    from t_snack_order_log
+		    where type=2
+		        and flow_id=#{userId}
+		)a
+	</select>
+	
+	<select id="querySaleTop" resultType="map" parameterType="map">
+		select
+		    product_name productName,
+		    sum(order_num) saleNum    
+		from t_snack_order_log
+		where type=2
+			and order_date &lt;= current_date()
+			and order_date &gt;= date_sub(current_date(),interval 7 day)
+		group by product_name
+		order by saleNum desc
+		limit 0,10
+	</select>
+	
+	<select id="kpiAnalysis" statementType="CALLABLE"
+		parameterType="map">    
+		<![CDATA[
+			call pr_qry_snack_analysis(
+				#{uuid,mode=IN,jdbcType=VARCHAR},
+				#{userId,mode=IN,jdbcType=VARCHAR},
+				#{flag,mode=OUT,jdbcType=DECIMAL}
+			)
+		]]>
+	</select>
+	
+</mapper>

@@ -9,8 +9,6 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
-import org.directwebremoting.WebContextFactory;
-import org.directwebremoting.annotations.RemoteProxy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +22,7 @@ import com.dw.web.shiro.OperatorToken;
 import com.dw.web.utils.WebConstants;
 
 @Component
-@RemoteProxy(name = "loginDwr")
+//@RemoteProxy(name = "loginDwr")
 public class LoginDwr {
 
 	private static Logger logger = LoggerFactory.getLogger(LoginDwr.class);
@@ -116,7 +114,8 @@ public class LoginDwr {
 	@SuppressWarnings("unchecked")
 	public void setSession(OperatorToken aot, HashMap<String,String> rtnMap){
 		HashMap<String, Object> principalMap = (HashMap<String, Object>) aot.getPrincipal();
-		HttpSession session = WebContextFactory.get().getSession();
+		HttpSession session = null;
+//		HttpSession session = WebContextFactory.get().getSession();
 		session.setAttribute(WebConstants.USER_OP_RIGHTS, principalMap.get(WebConstants.USER_OP_RIGHTS)); //菜单权限
 		session.setAttribute(WebConstants.USER_OP_FUNCTIONS, principalMap.get(WebConstants.USER_OP_FUNCTIONS));	//功能权限	
 		List<Right> rightGroup = (List<Right>)principalMap.get(WebConstants.USER_ALL_RIGHTS);//所有权限

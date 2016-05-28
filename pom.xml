@@ -2,12 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.money</groupId>
-	<artifactId>money</artifactId>
+	<groupId>com.dw</groupId>
+	<artifactId>dw</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>money</name>
+	<name>dw</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -322,14 +322,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.directwebremoting</groupId>
-			<artifactId>dwr</artifactId>
-			<version>3.0</version>
-			<scope>system</scope>
-			<systemPath>${basedir}/dependLib/dwr.jar</systemPath>
-		</dependency>
-
-		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-all</artifactId>
 			<version>1.2.2</version>
@@ -391,7 +383,7 @@
 		<!-- memcache client end -->
 	</dependencies>
 	<build>
-		<finalName>money</finalName>
+		<finalName>dw</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
