@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/DeveloperEdition/!svn/ver/93670/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views
+END
+404.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/DeveloperEdition/!svn/ver/93739/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/404.ftl
+END
+login.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/DeveloperEdition/!svn/ver/92230/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/login.ftl
+END
+sessionInvalid.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DeveloperEdition/!svn/ver/93742/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/sessionInvalid.ftl
+END

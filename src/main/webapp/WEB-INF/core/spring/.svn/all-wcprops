@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/DeveloperEdition/!svn/ver/92812/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring
+END
+spring-task.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring/spring-task.xml
+END
+spring-ds.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DeveloperEdition/!svn/ver/92812/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring/spring-ds.xml
+END
+spring-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DeveloperEdition/!svn/ver/93650/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring/spring-beans.xml
+END
+spring-mybatis.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring/spring-mybatis.xml
+END
+spring-dwr.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/spring/spring-dwr.xml
+END

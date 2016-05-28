@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/shiro
+END
+CustomAuthFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DeveloperEdition/!svn/ver/93642/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/shiro/CustomAuthFilter.java
+END
+CustomRealm.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/shiro/CustomRealm.java
+END
+OperatorToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/shiro/OperatorToken.java
+END

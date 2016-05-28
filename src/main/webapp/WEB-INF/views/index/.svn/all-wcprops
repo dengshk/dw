@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/DeveloperEdition/!svn/ver/93428/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index
+END
+indexMain.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DeveloperEdition/!svn/ver/92230/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index/indexMain.ftl
+END
+indexMenu.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index/indexMenu.ftl
+END
+copyright.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DeveloperEdition/!svn/ver/92201/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index/copyright.ftl
+END
+indexCenter.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index/indexCenter.ftl
+END
+indexTop.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DeveloperEdition/!svn/ver/93428/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/index/indexTop.ftl
+END

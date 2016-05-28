@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DeveloperEdition/!svn/ver/93006/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/service/userManager
+END
+UserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/DeveloperEdition/!svn/ver/91610/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/service/userManager/UserService.java
+END
+OperatorService.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/service/userManager/OperatorService.java
+END
+GroupService.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/DeveloperEdition/!svn/ver/93006/ROAD_TEST/source/web/trunk/rdt/src/main/java/com/wireless/web/service/userManager/GroupService.java
+END

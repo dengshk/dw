@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/DeveloperEdition/!svn/ver/93226/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core
+END
+context-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DeveloperEdition/!svn/ver/93642/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/context-servlet.xml
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DeveloperEdition/!svn/ver/93450/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/applicationContext.xml
+END
+dwr-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DeveloperEdition/!svn/ver/90697/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/core/dwr-servlet.xml
+END

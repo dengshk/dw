@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DeveloperEdition/!svn/ver/93620/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/userManager
+END
+editUser.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/DeveloperEdition/!svn/ver/93685/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/userManager/editUser.ftl
+END
+operatorManager.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/DeveloperEdition/!svn/ver/93620/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/userManager/operatorManager.ftl
+END
+modfiyPassword.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DeveloperEdition/!svn/ver/92177/ROAD_TEST/source/web/trunk/rdt/src/main/webapp/WEB-INF/views/userManager/modfiyPassword.ftl
+END
