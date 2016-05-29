@@ -1,7 +1,7 @@
 <!-- BEGIN FOOTER -->
    <div class="footer">
 		<div class="footer-inner">
-			2016 © 零食管理系统- 成都网优力软件有限公司.  
+			2016 © 邓世锴&王燕 - 成长录(路).  
 		</div>
 		<div class="footer-tools">
 			<span class="go-top">

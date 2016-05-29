@@ -21,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <head>
         <meta charset="utf-8" />
-        <title>宝宝成长录 | 登录</title>
+        <title>成长录 | 登录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -53,7 +53,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <body class=" login">
         <!-- BEGIN LOGO -->
         <div class="logo">
-        	<h2 class="form-title" style="color:white;">宝宝成长录</h2>
+        	<h2 class="form-title" style="color:white;">成长录(路)</h2>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -70,13 +70,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     <label class="control-label visible-ie8 visible-ie9">用户名</label>
                     <div class="input-icon">
                         <i class="fa fa-user"></i>
-                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="username" /> </div>
+                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名" name="username" value="admin" /> </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label visible-ie8 visible-ie9">密码</label>
                     <div class="input-icon">
                         <i class="fa fa-lock"></i>
-                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password" /> </div>
+                        <input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="密码" name="password" value="123456" /> </div>
                 </div>
                 <div class="form-actions">
                     <label class="rememberme mt-checkbox mt-checkbox-outline">
@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <!-- END LOGIN -->
         <!-- BEGIN COPYRIGHT -->
-        <div class="copyright"> 2016 &copy; 邓世锴&王燕 - 宝宝成长录(路). </div>
+        <div class="copyright"> 2016 &copy; 邓世锴&王燕 - 成长录(路). </div>
         <!-- END COPYRIGHT -->
         <!--[if lt IE 9]>
 <script src="${application.getContextPath()}/assets/global/plugins/respond.min.js"></script>
@@ -213,10 +213,10 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
         <script src="${application.getContextPath()}/assets/global/plugins/ladda/spin.min.js" type="text/javascript"></script>
         <script src="${application.getContextPath()}/assets/global/plugins/ladda/ladda.min.js" type="text/javascript"></script>
-        <script src="${application.getContextPath()}/assets/pages/scripts/login-4.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
+        <script src="${application.getContextPath()}/js/login-4.js" type="text/javascript"></script>
     </body>
 
 </html>

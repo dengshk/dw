@@ -7,10 +7,12 @@ var Login = function () {
 	            focusInvalid: false, // do not focus the last invalid input
 	            rules: {
 	                username: {
-	                    required: true
+	                    required: true,
+	                    rangelength:[5,10]
 	                },
 	                password: {
-	                    required: true
+	                    required: true,
+	                    rangelength:[6,8]
 	                },
 	                remember: {
 	                    required: false
@@ -19,10 +21,12 @@ var Login = function () {
 
 	            messages: {
 	                username: {
-	                    required: "Username is required."
+	                    required: "用户名不能为空.",
+						rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串")
 	                },
 	                password: {
-	                    required: "Password is required."
+	                    required: "密码不能为空.",
+	                    rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串")
 	                }
 	            },
 
@@ -45,7 +49,25 @@ var Login = function () {
 	            },
 
 	            submitHandler: function (form) {
-	                form.submit();
+	            	$('.alert-danger').fadeOut();
+	            	var l = Ladda.create(this.submitButton);
+	            	l.start();
+	            	
+					$.post(contextPath+'/login/validate', $('.login-form').serialize(), function(data) {
+						if(data.code == 1000){
+		            		window.location.href = contextPath+data.user_home_page;
+		            	}else{
+		            		$('.alert-danger', $('.login-form'))
+		            			.html('<button class="close" data-close="alert"></button>'+'<span>'+ data.message +'</span>').fadeIn();
+		            	}
+		            }, 'json')
+		            	.always(function() {
+											l.stop();
+										}).error(
+												function(xhr, errorText,errorType) {
+													$('.alert-danger', $('.login-form'))
+							            				.html('<button class="close" data-close="alert"></button>'+'<span>'+ '登录失败;连接服务器异常,请稍候再试' +'</span>').fadeIn();
+												});
 	            }
 	        });
 
@@ -57,7 +79,7 @@ var Login = function () {
 	                return false;
 	            }
 	        });
-	}
+	};
 
 	var handleForgetPassword = function () {
 		$('.forget-form').validate({
@@ -120,22 +142,22 @@ var Login = function () {
 	            jQuery('.forget-form').hide();
 	        });
 
-	}
+	};
 
 	var handleRegister = function () {
 
 		        function format(state) {
             if (!state.id) { return state.text; }
             var $state = $(
-             '<span><img src="../assets/global/img/flags/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+             //'<span><img src="../assets/global/img/flags/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+             '<span><span class="' + state.element.getAttribute("fa") + '">' + '&nbsp;</span>' + state.text + '</span>'
             );
-            
             return $state;
         }
 
-        if (jQuery().select2 && $('#country_list').size() > 0) {
-            $("#country_list").select2({
-	            placeholder: '<i class="fa fa-map-marker"></i>&nbsp;Select a Country',
+        if (jQuery().select2 && $('#role_list').size() > 0) {
+            $("#role_list").select2({
+	            placeholder: '<i class="fa fa-hand-o-right"></i>&nbsp;选择角色',
 	            templateResult: format,
                 templateSelection: format,
                 width: 'auto', 
@@ -145,7 +167,7 @@ var Login = function () {
 	        });
 
 
-	        $('#country_list').change(function() {
+	        $('#role_list').change(function() {
 	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
 	        });
     	}
@@ -165,13 +187,7 @@ var Login = function () {
 	                    required: true,
 	                    email: true
 	                },
-	                address: {
-	                    required: true
-	                },
-	                city: {
-	                    required: true
-	                },
-	                country: {
+	                role: {
 	                    required: true
 	                },
 
@@ -192,7 +208,7 @@ var Login = function () {
 
 	            messages: { // custom messages for radio buttons and checkboxes
 	                tnc: {
-	                    required: "Please accept TNC first."
+	                    required: "不同意没得玩."
 	                }
 	            },
 
@@ -243,7 +259,7 @@ var Login = function () {
 	            jQuery('.login-form').show();
 	            jQuery('.register-form').hide();
 	        });
-	}
+	};
     
     return {
         //main function to initiate the module
@@ -255,10 +271,10 @@ var Login = function () {
 
             // init background slide images
 		    $.backstretch([
-		        "../assets/pages/media/bg/1.jpg",
-		        "../assets/pages/media/bg/2.jpg",
-		        "../assets/pages/media/bg/3.jpg",
-		        "../assets/pages/media/bg/4.jpg"
+		        "./assets/pages/media/bg/1.jpg",
+		        "./assets/pages/media/bg/2.jpg",
+		        "./assets/pages/media/bg/3.jpg",
+		        "./assets/pages/media/bg/4.jpg"
 		        ], {
 		          fade: 1000,
 		          duration: 8000
@@ -270,5 +286,6 @@ var Login = function () {
 }();
 
 jQuery(document).ready(function() {
+	Ladda.bind( 'input[type=submit]' );
     Login.init();
 });

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self'; img-src data:; script-src 'self'; style-src 'unsafe-inline'">
     <meta content="origin" name="referrer">
-    <title>宝宝成长录 | 400</title>
+    <title>成长录 | 400</title>
     <style type="text/css" media="screen">
       body {
         background-color: #f1f1f1;
@@ -15,12 +15,13 @@
       button {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
-      .container { margin: 30px auto 40px auto; width: 800px; text-align: center; }
+      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
 
       a { color: #4183c4; text-decoration: none; font-weight: bold; }
       a:hover { text-decoration: underline; }
 
       h3 { color: #666; }
+      p { color: rgba(0, 0, 0, 0.5); margin: 10px 0 10px; font-size: 18px; font-weight: 200; line-height: 1.6em;}
       ul { list-style: none; padding: 25px 0; }
       li {
         display: inline;
@@ -283,7 +284,12 @@
         <input class="btn" type="submit" value="Search">
       </form>
 	  -->
+      <p><strong>资源不存在,休息一会儿吧!</strong></p>
 
+      <p>我们会跟踪这些错误,如果问题一直存在,还请随时与我们联系;</p>
+      
+      <p>在此期间,您可以尝试刷新.</p>
+      
       <div id="suggestions">
         <a href="${application.getContextPath()}">返回首页</a> &mdash;
         <a href="javascript:history.go(-1)">返回上一页</a>

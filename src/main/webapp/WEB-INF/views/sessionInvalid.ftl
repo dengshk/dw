@@ -12,25 +12,17 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!-- BEGIN HEAD -->
 <head>
 	<meta charset="utf-8" />
-	<title>零食管理系统</title>
+	<title>成长录 | 会话超时</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
 	<meta name="MobileOptimized" content="320">
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->          
-	<link href="${application.getContextPath()}/scripts/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<link href="${application.getContextPath()}/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<!-- END GLOBAL MANDATORY STYLES -->
 	<!-- BEGIN THEME STYLES --> 
-	<link href="${application.getContextPath()}/scripts/css/style-metronic.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/css/plugins.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-	<link href="${application.getContextPath()}/scripts/css/pages/error.css" rel="stylesheet" type="text/css"/>
-	<link href="${application.getContextPath()}/scripts/css/custom.css" rel="stylesheet" type="text/css"/>
+	<link href="${application.getContextPath()}/assets/pages/css/error.min.css" rel="stylesheet" type="text/css"/>
 	<!-- END THEME STYLES -->
 	<link rel="shortcut icon" href="favicon.ico" />
 </head>
@@ -38,7 +30,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 <!-- BEGIN BODY -->
 <body class="page-500-full-page">
 	<div class="portlet box blue" >
-		<div class="portlet-body form">
+		<div class="portlet-body form" style="background-color: #fff;">
 		<div class="row">
 			<div class="col-md-12 page-500">
 				<div class=" number" style="font-size:68px;"> 登录已失效 </div>
@@ -60,6 +52,6 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 </body>
 <!-- END BODY -->
 <script>
-setTimeout(function(){window.parent.parent.location.href='/snack/login'},'1000')
+	setTimeout(function(){window.parent.parent.location.href='${application.getContextPath()}'},'3000')
 </script>
 </html>
