@@ -24,7 +24,7 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 	<!-- BEGIN THEME STYLES --> 
 	<link href="${application.getContextPath()}/assets/pages/css/error.min.css" rel="stylesheet" type="text/css"/>
 	<!-- END THEME STYLES -->
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="${application.getContextPath()}/assets/favicon.ico" />
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->

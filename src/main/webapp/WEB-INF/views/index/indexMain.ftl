@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="${application.getContextPath()}/assets/layouts/layout/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
 <link href="${application.getContextPath()}/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
 <!-- END THEME LAYOUT STYLES -->
-<link rel="shortcut icon" href="favicon.ico" />
+<link rel="shortcut icon" href="${application.getContextPath()}/assets/favicon.ico" />
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
 <script src="../assets/global/plugins/excanvas.min.js"></script> 
